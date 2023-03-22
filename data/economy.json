@@ -1,0 +1,591 @@
+{
+	"jobs":{
+		"janitor": {
+			"name": "Дворник",
+			"rest_time": 1200,
+			"salary": 800,
+			"item_dependencies": []
+		},
+		"scavenger": {
+			"name": "Уборщик мусора",
+			"rest_time": 1200,
+			"salary": 800,
+			"item_dependencies": []
+		},
+		"newspaper_delivery_man": {
+			"name": "Доставщик газет",
+			"rest_time": 1200,
+			"salary": 1000,
+			"item_dependencies": ["edu:level_1", "immovables:level_1"]
+		},
+		"food_delivery_man": {
+			"name": "Доставщик еды",
+			"rest_time": 1200,
+			"salary": 1000,
+			"item_dependencies": ["edu:level_1", "immovables:level_1"]
+		},
+		"sales_assistant": {
+			"name": "Помощник продавца",
+			"rest_time": 1500,
+			"salary": 1625,
+			"item_dependencies": ["edu:level_2", "immovables:level_1"]
+		},
+		"waiter": {
+			"name": "Официант",
+			"rest_time": 1500,
+			"salary": 1625,
+			"item_dependencies": ["edu:level_2", "immovables:level_1"]
+		},
+		"mechanic_turner": {
+			"name": "Токарь-Механик",
+			"rest_time": 1800,
+			"salary": 2400,
+			"item_dependencies": ["edu:level_3", "immovables:level_2"]
+		},
+		"welder": {
+			"name": "Сварщик",
+			"rest_time": 1800,
+			"salary": 2400,
+			"item_dependencies": ["edu:level_3", "immovables:level_2"]
+		},
+		"it_specialist": {
+			"name": "IT-специалист",
+			"rest_time": 2100,
+			"salary": 3500,
+			"item_dependencies": ["edu:level_4", "immovables:level_3"]
+		},
+		"politician": {
+			"name": "Политик",
+			"rest_time": 2100,
+			"salary": 3500,
+			"item_dependencies": ["edu:level_4", "immovables:level_3"]
+		},
+		"engineer": {
+			"name": "Инженер",
+			"rest_time": 2400,
+			"salary": 5200,
+			"item_dependencies": ["edu:level_5", "immovables:level_4"]
+		}
+	},
+	"items":{
+		"special": {
+			"best_girl": {
+				"name": "⭐Самая лучшая девочка⭐",
+				"price": 0,
+				"max_count": 1,
+				"can_sell": false,
+				"can_buy": false,
+				"hidden": false
+			},
+			"new_year_2020_1": {
+				"name": "⭐Календарь 2020⭐",
+				"price": 1000000,
+				"max_count": 1,
+				"can_sell": true,
+				"can_buy": false,
+				"hidden": false
+			},
+			"new_year_2020_2": {
+				"name": "⭐Магнитик 2020⭐",
+				"price": 1000000,
+				"max_count": 1,
+				"can_sell": true,
+				"can_buy": false,
+				"hidden": false
+			},
+			"new_year_2020_3": {
+				"name": "⭐Оливьешка 2020⭐",
+				"price": 1000000,
+				"max_count": 1,
+				"can_sell": true,
+				"can_buy": false,
+				"hidden": false
+			},
+			"new_year_2020_tangerine": {
+				"name": "⭐Мандаринка 2020⭐",
+				"price": 3000000,
+				"max_count": 1,
+				"can_sell": true,
+				"can_buy": false,
+				"hidden": false
+			}
+		},
+		"dailyprize":{
+			"item1":{
+				"name": "Карта Premium-банка",
+				"price": 50000,
+				"max_count": 65536,
+				"can_sell": true,
+				"can_buy": false,
+				"hidden": false,
+				"action": [
+					{
+						"label": "Использовать",
+						"callback": "dailyprize",
+						"payload": "deposit"
+					}
+				]
+			},
+			"item2":{
+				"name": "Доп. Дневной приз",
+				"price": 30000,
+				"max_count": 65536,
+				"can_sell": true,
+				"can_buy": false,
+				"hidden": false
+			},
+			"item3":{
+				"name": "Энергетик",
+				"price": 1000,
+				"max_count": 65536,
+				"can_sell": true,
+				"can_buy": false,
+				"hidden": false
+			},
+			"item4":{
+				"name": "Сертификат З/П",
+				"price": 5000,
+				"max_count": 65536,
+				"can_sell": true,
+				"can_buy": false,
+				"hidden": false
+			}
+		},
+		"car":{
+			"level_1": {
+				"name": "Шестерка",
+				"price": 50000,
+				"max_count": 1,
+				"can_sell": true,
+				"can_buy": true,
+				"hidden": false
+			},
+			"level_2": {
+				"name": "Буханка",
+				"price": 75000,
+				"max_count": 1,
+				"can_sell": true,
+				"can_buy": true,
+				"hidden": false
+			},
+			"level_3": {
+				"name": "Запорожец",
+				"price": 100000,
+				"max_count": 1,
+				"can_sell": true,
+				"can_buy": true,
+				"hidden": false
+			},
+			"level_4": {
+				"name": "Mitsubishi Lancer",
+				"price": 200000,
+				"max_count": 1,
+				"can_sell": true,
+				"can_buy": true,
+				"hidden": false
+			},
+			"level_5": {
+				"name": "Audi A6",
+				"price": 350000,
+				"max_count": 1,
+				"can_sell": true,
+				"can_buy": true,
+				"hidden": false
+			},
+			"level_6": {
+				"name": "BMW X6",
+				"price": 650000,
+				"max_count": 1,
+				"can_sell": true,
+				"can_buy": true,
+				"hidden": false
+			},
+			"level_7": {
+				"name": "Mercedes-Benz SLR McLaren",
+				"price": 800000,
+				"max_count": 1,
+				"can_sell": true,
+				"can_buy": true,
+				"hidden": false
+			},
+			"level_8": {
+				"name": "Lamborghini Aventador",
+				"price": 1500000,
+				"max_count": 1,
+				"can_sell": true,
+				"can_buy": true,
+				"hidden": false
+			}
+		},
+		"immovables": {
+			"level_1": {
+				"name": "Номер в мотеле",
+				"price": 5000,
+				"max_count": 1,
+				"can_sell": true,
+				"can_buy": true,
+				"hidden": false
+			},
+			"level_2": {
+				"name": "Комната в гетто-районе",
+				"price": 25000,
+				"max_count": 1,
+				"can_sell": true,
+				"can_buy": true,
+				"hidden": false
+			},
+			"level_3": {
+				"name": "Двухкомнатная квартира",
+				"price": 175000,
+				"max_count": 1,
+				"can_sell": true,
+				"can_buy": true,
+				"hidden": false
+			},
+			"level_4": {
+				"name": "Трёхкомнатная квартира",
+				"price": 900000,
+				"max_count": 1,
+				"can_sell": true,
+				"can_buy": true,
+				"hidden": false
+			},
+			"level_5": {
+				"name": "Пятикомнатная квартира",
+				"price": 3500000,
+				"max_count": 1,
+				"can_sell": true,
+				"can_buy": true,
+				"hidden": false
+			},
+			"level_6": {
+				"name": "Вилла в Комо",
+				"price": 54000000,
+				"max_count": 1,
+				"can_sell": true,
+				"can_buy": true,
+				"hidden": false
+			},
+			"level_7": {
+				"name": "Аппартаменты во Франции",
+				"price": 186500000,
+				"max_count": 1,
+				"can_sell": true,
+				"can_buy": true,
+				"hidden": false
+			},
+			"level_8": {
+				"name": "Жилой комплекс в Лос-Анжелесе",
+				"price": 436000000,
+				"max_count": 1,
+				"can_sell": true,
+				"can_buy": true,
+				"hidden": false
+			}
+		},
+		"phone": {
+			"level_1": {
+				"name": "Кнопочная Nokia",
+				"price": 2500,
+				"max_count": 1,
+				"can_sell": true,
+				"can_buy": true,
+				"hidden": false
+			},
+			"level_2": {
+				"name": "Кнопочный Samsung",
+				"price": 5000,
+				"max_count": 1,
+				"can_sell": true,
+				"can_buy": true,
+				"hidden": false
+			},
+			"level_3": {
+				"name": "Кнопочный Sony",
+				"price": 8500,
+				"max_count": 1,
+				"can_sell": true,
+				"can_buy": true,
+				"hidden": false
+			},
+			"level_4": {
+				"name": "iPhone 2G",
+				"price": 14999,
+				"max_count": 1,
+				"can_sell": true,
+				"can_buy": true,
+				"hidden": false
+			},
+			"level_5": {
+				"name": "iPhone 5S",
+				"price": 24999,
+				"max_count": 1,
+				"can_sell": true,
+				"can_buy": true,
+				"hidden": false
+			},
+			"level_6": {
+				"name": "iPhone 8 Plus",
+				"price": 39999,
+				"max_count": 1,
+				"can_sell": true,
+				"can_buy": true,
+				"hidden": false
+			},
+			"level_7": {
+				"name": "iPhone 10 XS Max",
+				"price": 74999,
+				"max_count": 1,
+				"can_sell": true,
+				"can_buy": true,
+				"hidden": false
+			},
+			"level_8": {
+				"name": "iPhone 12 Pro Max",
+				"price": 119999,
+				"max_count": 1,
+				"can_sell": true,
+				"can_buy": true,
+				"hidden": false
+			}
+		},
+		"edu": {
+			"level_1": {
+				"name": "Начальное образование",
+				"price": 10000,
+				"max_count": 1,
+				"can_sell": false,
+				"can_buy": true,
+				"hidden": true
+			},
+			"level_2": {
+				"name": "Полное среднее образование",
+				"price": 30000,
+				"max_count": 1,
+				"can_sell": false,
+				"can_buy": true,
+				"hidden": true
+			},
+			"level_3": {
+				"name": "Профессиональное среднее образование",
+				"price": 100000,
+				"max_count": 1,
+				"can_sell": false,
+				"can_buy": true,
+				"hidden": true
+			},
+			"level_4": {
+				"name": "Бакалавриат высшего образования",
+				"price": 250000,
+				"max_count": 1,
+				"can_sell": false,
+				"can_buy": true,
+				"hidden": true
+			},
+			"level_5": {
+				"name": "Магистр высшего образования",
+				"price": 700000,
+				"max_count": 1,
+				"can_sell": false,
+				"can_buy": true,
+				"hidden": true
+			},
+			"level_6": {
+				"name": "Кандидат наук",
+				"price": 3000000,
+				"max_count": 1,
+				"can_sell": false,
+				"can_buy": true,
+				"hidden": true
+			},
+			"level_7": {
+				"name": "Доктор наук",
+				"price": 9000000,
+				"max_count": 1,
+				"can_sell": false,
+				"can_buy": true,
+				"hidden": true
+			}
+		}
+	},
+	"shop_sections":[
+		{
+			"name": "Автомобиль",
+			"type": "item",
+			"items": "car"
+		},
+		{
+			"name": "Недвижимость",
+			"type": "item",
+			"items": "immovables"
+		},
+		{
+			"name": "Телефон",
+			"type": "item",
+			"items": "phone"
+		},
+		{
+			"name": "Бизнес",
+			"type": "enterprise"
+		}
+	],
+	"dailyprize_list":[
+		{
+			"type": "money",
+			"amount": 10000
+		},
+		{
+			"type": "item",
+			"item": "dailyprize:item1:1"
+		},
+		{
+			"type": "item",
+			"item": "dailyprize:item2:1"
+		},
+		{
+			"type": "item",
+			"item": "dailyprize:item3:2"
+		},
+		{
+			"type": "money",
+			"amount": 50000
+		},
+		{
+			"type": "item",
+			"item": "dailyprize:item4:1"
+		},
+		{
+			"type": "item",
+			"item": "dailyprize:item1:2"
+		},
+		{
+			"type": "money",
+			"amount": 100000
+		},
+		{
+			"type": "item",
+			"item": "dailyprize:item3:1"
+		},
+		{
+			"type": "item",
+			"item": "dailyprize:item2:2"
+		}
+	],
+	"enterprise_types": {
+	    "shop": {
+	      	"name": "Магазин",
+	      	"price": 1500000,
+	      	"initial_workers": 5,
+	      	"improvment":{
+	      		"workers": [
+		      		{
+		      			"name": "Расширение персонала Ⅰ",
+			          	"duration": 7200,
+			          	"workers_required": 5,
+			          	"exp_required": 50,
+			          	"cost": 20000,
+			          	"new_workers": 5
+		      		},
+		      		{
+		      			"name": "Расширение персонала Ⅱ",
+			          	"duration": 14400,
+			          	"workers_required": 10,
+			          	"exp_required": 100,
+			          	"cost": 45000,
+			          	"new_workers": 10
+		      		},
+		      		{
+		      			"name": "Расширение персонала Ⅲ",
+			          	"duration": 28800,
+			          	"workers_required": 20,
+			          	"exp_required": 390,
+			          	"cost": 80000,
+			          	"new_workers": 30
+		      		},
+		      		{
+		      			"name": "Расширение персонала Ⅳ",
+			          	"duration": 43200,
+			          	"workers_required": 50,
+			          	"exp_required": 1000,
+			          	"cost": 170000,
+			          	"new_workers": 30
+		      		},
+		      		{
+		      			"name": "Расширение персонала Ⅴ",
+			          	"duration": 57600,
+			          	"workers_required": 80,
+			          	"exp_required": 2480,
+			          	"cost": 400000,
+			          	"new_workers": 30
+		      		},
+		      		{
+		      			"name": "Расширение персонала Ⅵ",
+			          	"duration": 72000,
+			          	"workers_required": 110,
+			          	"exp_required": 3180,
+			          	"cost": 780000,
+			          	"new_workers": 55
+		      		}
+	      		],
+		      	"contracts": [
+		      		{
+		      			"name": "Расширение сети Ⅰ",
+			          	"duration": 21600,
+			          	"workers_required": 20,
+			          	"exp_required": 450,
+			          	"cost": 125000
+		      		},
+		      		{
+		      			"name": "Расширение сети II",
+			          	"duration": 64800,
+			          	"workers_required": 165,
+			          	"exp_required": 5920,
+			          	"cost": 800000
+		      		}
+		      	]
+	      	},
+	      	"contracts": [
+		        {
+		          	"name": "Продажа Ⅰ",
+		          	"duration": 5400,
+		          	"workers_required": 5,
+		          	"cost": 2500,
+		          	"income": 3850,
+		          	"exp": 10
+		        },
+		        {
+		          	"name": "Продажа Ⅱ",
+		          	"duration": 7200,
+		          	"workers_required": 15,
+		          	"cost": 6950,
+		          	"income": 9650,
+		          	"exp": 30
+		        },
+		        {
+		          	"name": "Продажа Ⅲ",
+		          	"duration": 12600,
+		          	"workers_required": 25,
+		          	"cost": 15500,
+		          	"income": 24005,
+		          	"exp": 50
+		        },
+		        {
+		          	"name": "Продажа Ⅳ",
+		          	"duration": 25200,
+		          	"workers_required": 50,
+		          	"cost": 44750,
+		          	"income": 75410,
+		          	"exp": 210
+		        },
+		        {
+		          	"name": "Продажа Ⅴ",
+		          	"duration": 50400,
+		          	"workers_required": 90,
+		          	"cost": 185400,
+		          	"income": 307200,
+		          	"exp": 320
+		        }
+	        ]
+	    }
+  	}
+}

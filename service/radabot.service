@@ -1,0 +1,13 @@
+[Unit]
+Description=VK group bot
+After=multi-user.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/radabot
+ExecStart=/home/radabot/env/bin/python radabot.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

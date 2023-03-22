@@ -1,0 +1,78 @@
+{
+    "user_permissions": {
+        "set_permits": {
+            "label": "Управление правами",
+            "desc": "Позволяет изменять права пользователей",
+            "default": false,
+            "hidden": false
+        },
+        "change_nick": {
+            "label": "Управление никами",
+            "desc": "Позволяет изменять никнеймы других пользователей",
+            "default": false,
+            "hidden": false
+        },
+        "customize_chat": {
+            "label": "Управление чатом",
+            "desc": "Позволяет изменять настройки беседы",
+            "default": false,
+            "hidden": false
+        },
+        "customize_memes": {
+            "label": "Управление мема",
+            "desc": "Позволяет добавлять и удалять мемы",
+            "default": false,
+            "hidden": false
+        },
+        "manage_punishments": {
+            "label": "Управление наказаниями",
+            "desc": "Позволяет \"наказывать\" пользователей",
+            "default": false,
+            "hidden": false
+        },
+        "prohibit_autokick": {
+            "label": "Игнор автокика",
+            "desc": "Позволяет носителю игнорировать систему автокика",
+            "default": false,
+            "hidden": false
+        },
+        "prohibit_antiflood": {
+            "label": "Игнор антифлуда",
+            "desc": "Позволяет носителю игнорировать систему антифлуда",
+            "default": false,
+            "hidden": false
+        },
+        "drink_tea": {
+            "label": "Пить чай",
+            "desc": "Позволяет пить чай",
+            "default": false,
+            "hidden": true
+        }
+    },
+    "chat_modes": {
+        "allow_memes": {
+            "label": "Мемы",
+            "default": true
+        },
+        "antiflood_enabled": {
+            "label": "Антифлуд",
+            "default": true
+        },
+        "economy_enabled": {
+            "label": "Экономика",
+            "default": false
+        },
+        "roleplay_enabled": {
+            "label": "РП",
+            "default": true
+        },
+        "games_enabled": {
+            "label": "Игры",
+            "default": true
+        },
+        "legacy_enabled": {
+            "label": "Legacy-контент",
+            "default": false
+        }
+    }
+}
